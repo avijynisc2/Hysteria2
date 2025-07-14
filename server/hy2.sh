@@ -2071,7 +2071,7 @@ generate_client_config(){
 		addOrUpdateYaml "$client_configfile" "tls.insecure" "false"
 	fi
 	addOrUpdateYaml  "$client_configfile" "transport.type" "udp"
-	addOrUpdateYaml  "$client_configfile" "transport.udp.hopInterval" "120s"
+	addOrUpdateYaml  "$client_configfile" "transport.udp.hopInterval" "300s"
 	if [ "${obfs_status}" == "true" ];then
 		addOrUpdateYaml "$client_configfile" "obfs.type" "salamander"
 		addOrUpdateYaml "$client_configfile" "obfs.salamander.password" "${obfs_pass}"
